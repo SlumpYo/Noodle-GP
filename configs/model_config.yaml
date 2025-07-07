@@ -1,0 +1,28 @@
+# Model architecture hyperparameters
+d_model: 1024              # Transformer embedding dimension
+nhead: 8                 # Number of attention heads
+num_encoder_layers: 2     # Depth of the Transformer encoder stack
+num_decoder_layers: 6     # Depth of the Transformer decoder stack
+dim_feedforward: 4096     # Hidden size of the feed-forward sublayers
+dropout: 0.1              # Dropout probability in attention / FFN
+
+# Optimization hyperparameters
+learning_rate: 1e-4       # Initial learning rate for transformer
+backbone_lr: 1e-4         # for fine-tuning
+weight_decay: 0        # Weight decay (L2 regularization)
+cross_entropy_weight: 1
+
+# Training loop settings
+epochs: 250                # Total number of training epochs
+batch_size: 16             # Default batch size (can be overridden via CLI)
+output_dir: "model3" # Directory where checkpoints will be saved
+patience: 125
+min-delta: 1e-3
+seed: 0
+
+n-notes: 64 # tabest
+n_notes: 64
+
+feature_keys:
+  - cqt
+  - log_cqt

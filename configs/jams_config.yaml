@@ -1,0 +1,28 @@
+note_resolution: 16
+down_sampling_rate: 22050
+bins_per_octave: 24
+cqt_n_bins: 192
+n_mels: 192
+hop_length: 512
+generated_midi_n_bars: 4
+n_cores: 12
+
+paths:
+  midi_glob: "data/processed/midi/original/*.mid"
+
+  audio_dir: "data/raw/audio_mono_mic"
+  wav_suffix: "_mic.wav"
+
+  npz_dirs:
+    auto_quantized: "data/processed/npz/augmented/auto_quantized_{note_resolution}"
+    original:       "data/processed/npz/augmented3/original"
+
+
+# Which pitch shifts to apply (in semitones)
+pitch_shifts: [1, -1]
+
+# Which time-stretch rates to apply
+time_stretches: [0.9, 1.1]
+
+# Which velocity (volume) factors to apply
+velocity_factors: [0.9, 1.1]

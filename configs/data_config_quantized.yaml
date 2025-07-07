@@ -1,0 +1,21 @@
+# Directory of your 4-bar quantized splits
+# Commented non-augmented
+npz_dir: data/processed/npz/original/split
+#npz_dir: data/processed/npz/augmented/auto_quantized_16/split
+
+# Which keys in the .npz to stack as inputs (channels)
+feature_keys:
+  - cqt
+  - log_cqt
+
+# Which keys to use as prediction targets
+target_keys:
+  - tab
+  - tab_onset
+
+batch_size: 16
+shuffle: true
+num_workers: 4
+pin_memory: true
+
+n_notes: 64
