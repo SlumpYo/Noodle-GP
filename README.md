@@ -8,4 +8,16 @@ To use the model, first set up a conda environment using the env.yml file:
 conda env create -f env.yml
 ```
 
+Activate the environment:
+```
+conda activate noodleGP
+```
+
 To download and convert GuitarSet see [Tab-Estimator](https://github.com/KimSehun725/Tab-estimator).
+
+To start training, run:
+```
+python -m src.training.6-fold-final-train
+```
+
+This will train the 6 folds.
